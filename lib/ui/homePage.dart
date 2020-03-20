@@ -17,13 +17,14 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   PageController _pageController;
   List<Widget> _screenList = [Loader(),Text("2",style: TextStyle(color: Colors.black),),Loader(),Text("2",style: TextStyle(color: Colors.black),)];
 
-
+/*when init component*/
   @override
   void initState() {
     _pageController = PageController();
      super.initState();
   }
 
+  /*On item click in the nav bar*/
   void _onTap(index)async{
    setState(() {
       _selectedIndex = index;
@@ -32,8 +33,11 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
+
+    /*get the size of the screen*/
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
@@ -87,7 +91,6 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
        extendBodyBehindAppBar: true,
        body: Stack(
            children: <Widget>[
-
              Container(
                height: MediaQuery.of(context).size.height,
                padding: EdgeInsets.only(bottom: 108),
@@ -126,6 +129,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
      );
   }
 
+  /*when the component die*/
   @override
   void dispose() {
     _pageController.dispose();
@@ -133,38 +137,3 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   }
 }
 
-
-/*
-RollingNavBar.iconData(
-indicatorCornerRadius: 120,
-activeIndex: _selectedIndex,
-onTap: _onTap,
-animationType: AnimationType.shrinkOutIn,
-baseAnimationSpeed: 200,
-iconSize: 20,
-iconData: <IconData>[
-AntDesign.home,
-FontAwesome.heart_o,
-AntDesign.plus,
-FontAwesome.user_o
-],
-activeIconColors: <Color>[
-Colors.white,
-Colors.white,
-Colors.white,
-Colors.white,
-],
-iconColors: <Color>[
-Color(0xff707070),
-Color(0xff707070),
-Color(0xff707070),
-Color(0xff707070),
-],
-indicatorColors: <Color>[
-Color(0xffE33838),
-Color(0xffE33838),
-Color(0xffE33838),
-Color(0xffE33838),
-],
-
-),*/
