@@ -33,6 +33,7 @@ class _HomeState extends State<Home> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(22),
                   image: DecorationImage(
+                    colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.35), BlendMode.overlay),
                     image: AssetImage("asset/images/image0.jpg"),
                   /*image: new NetworkImage("https//."),*/
                     fit: BoxFit.cover
@@ -55,6 +56,7 @@ class _HomeState extends State<Home> {
                                 style: new TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
+                                  fontFamily: "Ebrima bold",
                                   fontSize: 15.0,
                                 )
                             ),
@@ -62,6 +64,7 @@ class _HomeState extends State<Home> {
                             new Text('Tuesday, 31 March 2020',
                                 style: new TextStyle(
                                   color: Colors.white,
+                                  fontFamily: "Ebrima",
                                   fontSize: 11.0,
                                 )
                             ),
@@ -104,6 +107,7 @@ class _HomeState extends State<Home> {
                                   style: new TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
+                                    fontFamily: "Ebrima bold",
                                     fontSize: 13.0,
                                   )
                               ),
@@ -143,6 +147,7 @@ class _HomeState extends State<Home> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(22),
                       image: DecorationImage(
+                          colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.35), BlendMode.overlay),
                           image: AssetImage("asset/images/image2.jpg"),
                           /*image: new NetworkImage("https//."),*/
                           fit: BoxFit.cover
@@ -162,6 +167,7 @@ class _HomeState extends State<Home> {
                               new Text('Big Ben History',
                                   style: new TextStyle(
                                     color: Colors.white,
+                                    fontFamily: "Ebrima bold",
                                     fontWeight: FontWeight.bold,
                                     fontSize: 13.5,
                                   )
@@ -170,6 +176,7 @@ class _HomeState extends State<Home> {
                               new Text('Tuesday, 31 March 2020',
                                   style: new TextStyle(
                                     color: Colors.white,
+                                    fontFamily: "Ebrima",
                                     fontSize: 10.0,
                                   )
                               ),
@@ -218,6 +225,7 @@ class _HomeState extends State<Home> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(22),
                 image: DecorationImage(
+                    colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.35), BlendMode.overlay),
                     image: AssetImage("asset/images/image0.jpg"),
                     /*image: new NetworkImage("https//."),*/
                     fit: BoxFit.cover
@@ -240,6 +248,7 @@ class _HomeState extends State<Home> {
                             style: new TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
+                              fontFamily: "Ebrima bold",
                               fontSize: 15.0,
                             )
                         ),
@@ -247,6 +256,7 @@ class _HomeState extends State<Home> {
                         new Text('Tuesday, 31 March 2020',
                             style: new TextStyle(
                               color: Colors.white,
+                              fontFamily: "Ebrima",
                               fontSize: 11.0,
                             )
                         ),
@@ -289,6 +299,7 @@ class _HomeState extends State<Home> {
                             style: new TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
+                              fontFamily: "Ebrima bold",
                               fontSize: 13.0,
                             )
                         ),
@@ -326,6 +337,7 @@ class _HomeState extends State<Home> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(22),
                       image: DecorationImage(
+                          colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.35), BlendMode.overlay),
                           image: AssetImage("asset/images/image2.jpg"),
                           /*image: new NetworkImage("https//."),*/
                           fit: BoxFit.cover
@@ -345,6 +357,7 @@ class _HomeState extends State<Home> {
                               new Text('Big Ben History',
                                   style: new TextStyle(
                                     color: Colors.white,
+                                    fontFamily: "Ebrima bold",
                                     fontWeight: FontWeight.bold,
                                     fontSize: 13.5,
                                   )
@@ -353,6 +366,7 @@ class _HomeState extends State<Home> {
                               new Text('Tuesday, 31 March 2020',
                                   style: new TextStyle(
                                     color: Colors.white,
+                                    fontFamily: "Ebrima",
                                     fontSize: 10.0,
                                   )
                               ),
@@ -412,6 +426,7 @@ class _HomeState extends State<Home> {
                           IconButton(
                             icon: Icon(AntDesign.search1,color: Color(0xff707070),size: 20,),
                             onPressed: () {
+                              Navigator.of(context).pushNamed("/search");
                             },
                           ),
 
@@ -432,7 +447,7 @@ class _HomeState extends State<Home> {
                       padding: EdgeInsets.only(left: 17,bottom: 7),
                       alignment: Alignment.centerLeft,
                       child: Text("Today,03 March 2020",
-                        style: TextStyle(fontSize: 13,fontFamily: "Ebrima",fontWeight: FontWeight.w400,color: Color(0xff707070)),
+                        style: TextStyle(fontSize: 13,fontFamily: "Ebrima",fontWeight: FontWeight.w100,color: Color(0xff707070)),
                       ),
                     ),
                     preferredSize: null
@@ -458,6 +473,7 @@ class _HomeState extends State<Home> {
                     Text('Recommended',
                         textAlign: TextAlign.center,
                         style: new TextStyle(
+                          fontFamily: "Ebrima",
                           fontWeight: FontWeight.w400,
                           color: Color(0xff707070),
                           fontSize: 20.0,
@@ -487,6 +503,7 @@ class _HomeState extends State<Home> {
                         textAlign: TextAlign.center,
                         style: new TextStyle(
                           fontWeight: FontWeight.w400,
+                          fontFamily: "Ebrima",
                           color: Color(0xff707070),
                           fontSize: 20.0,
                         )
@@ -509,6 +526,7 @@ class _HomeState extends State<Home> {
                     Text('Most liked',
                         textAlign: TextAlign.center,
                         style: new TextStyle(
+                          fontFamily: "Ebrima",
                           fontWeight: FontWeight.w400,
                           color: Color(0xff707070),
                           fontSize: 20.0,

@@ -2,8 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
-
-import 'package:postvent/ui/components/favorite/favoriteEvent.dart';
+import 'components/favorite/favoriteView.dart';
 import 'components/home.dart';
 import 'utilities/loader.dart';
 
@@ -17,7 +16,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   int _selectedIndex = 0;
   PageController _pageController;
-  List<Widget> _screenList = [Home(),FavoriteEvent(),Loader(),Loader()];
+  List<Widget> _screenList = [Home(),FavoriteView(),Loader(),Loader()];
 
 /*when init component*/
   @override
@@ -62,8 +61,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
          snakeShape: SnakeShape.circle,
          snakeColor: Color(0xffE33838),
          backgroundColor: Colors.white,
-         showUnselectedLabels: true,
-         showSelectedLabels: true,
+         showUnselectedLabels: false,
+         showSelectedLabels: false,
          currentIndex: _selectedIndex,
          onPositionChanged: (index) =>setState(() {
            _selectedIndex = index;
@@ -74,16 +73,19 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
          items: [
            BottomNavigationBarItem(
                icon: Icon(AntDesign.home, color: Color(0xff707070),),
-               title: Text('Home', style: TextStyle(color: Color(0xff707070)),)),
+               title: Text('', style: TextStyle(color: Color(0xff707070)),)
+           ),
            BottomNavigationBarItem(
                icon: Icon(FontAwesome.heart_o, color: Color(0xff707870),),
-               title: Text('Favorite', style: TextStyle(color: Color(0xff707070)),)),
+               title: Text('', style: TextStyle(color: Color(0xff707070)),)
+           ),
            BottomNavigationBarItem(
                icon: Icon(AntDesign.plussquareo, color: Color(0xff707070),),
-               title: Text('Added', style: TextStyle(color: Color(0xff707070)),)),
+               title: Text('', style: TextStyle(color: Color(0xff707070)),)
+           ),
            BottomNavigationBarItem(
                icon: Icon(FontAwesome.user_o, color: Color(0xff707070),),
-               title: Text('Profile', style: TextStyle(color: Color(0xff707070)),)),
+               title: Text('', style: TextStyle(color: Color(0xff707070)),)),
          ],
        ),
      );

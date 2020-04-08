@@ -255,7 +255,7 @@ class _DetailPageState extends State<DetailPage>{
                                   style: TextStyle(
                                       color: Color(0xff707070),
                                       fontWeight: FontWeight.w300,
-                                      fontSize: 13,
+                                      fontSize: 10,
                                       fontFamily: "CameronSans"
                                   ),
                                 ),
@@ -266,9 +266,12 @@ class _DetailPageState extends State<DetailPage>{
                         ),
                       ),
 
-                      IconButton(
-                          icon: Icon(Icons.more_horiz,color: Color(0xff707070),size: 25),
-                          onPressed: null
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: IconButton(
+                            icon: Icon(Icons.more_horiz,color: Color(0xff707070),size: 25),
+                            onPressed: null
+                        ),
                       )
 
                     ],

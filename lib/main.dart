@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'ui/components/details/details.dart';
-import 'ui/components/favorite/favoriteEvent.dart';
+import 'ui/components/favorite/followingEvent.dart';
+import 'ui/components/search/search.dart';
 import 'ui/homePage.dart';
 import 'ui/utilities/loader.dart';
 
@@ -21,8 +22,9 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
       routes: <String, WidgetBuilder> {
         '/home': (BuildContext context) => HomePage(),
-        '/favorites': (BuildContext context) => FavoriteEvent(),
+        '/favorites': (BuildContext context) => FollowingEvent(),
         '/details': (BuildContext context) => DetailPage(),
+        '/search': (BuildContext context) => SearchPage(),
         '/loader':(BuildContext context) => Loader(),
       },
     );
