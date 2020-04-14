@@ -28,110 +28,110 @@ class _SearchPageState extends State<SearchPage>{
 
     Widget _buildResultList(BuildContext context, int index) {
 
-      return Container(
-        child: GestureDetector(
-          onTap: (){
-            Navigator.of(context).pushNamed("/details");
-          },
-          child: Card(
-            margin: EdgeInsets.only(right: 10,left: 10,top: 7,bottom: 5),
-            shape: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(22),
-              borderSide: BorderSide(width: 0,style: BorderStyle.none),
-            ),
-            child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(22),
-                    image: DecorationImage(
-                        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.35), BlendMode.overlay),
-                        image: AssetImage("asset/images/image0.jpg"),
-                        /*image: new NetworkImage("https//."),*/
-                        fit: BoxFit.cover
-                    )
-                ),
-                width: _screenSize.width/1,
-                height: _screenSize.height/3.5,
-                padding: new EdgeInsets.only(left: 16.0, bottom: 8.0, right: 16.0),
-                child: new Stack(
-                  children: <Widget>[
+      return GestureDetector(
+        onTap: (){
+          Navigator.of(context).pushNamed("/details");
+        },
+        child: Card(
+          margin: EdgeInsets.only(right: 10,left: 16,top: 5,bottom: 8),
+          shape: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(22),
+            borderSide: BorderSide(width: 0,style: BorderStyle.none),
+          ),
+          child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(22),
+                  image: DecorationImage(
+                      colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.35), BlendMode.overlay),
+                      image: AssetImage("asset/images/image0.jpg"),
+                      /*image: new NetworkImage("https//."),*/
+                      fit: BoxFit.cover
+                  )
+              ),
+              width: _screenSize.width/1.1,
+              height: _screenSize.height/3.5,
+              padding: new EdgeInsets.only(left: 12.0, bottom: 8.0, right: 12.0),
+              child: new Stack(
+                children: <Widget>[
 
-                    new Positioned(
-                        left: 0.0,
-                        bottom: 5.0,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            new Text('Big Ben History',
-                                style: new TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontSize: 15.0,
-                                )
-                            ),
-                            const SizedBox(height: 5,),
-                            new Text('Tuesday, 31 March 2020',
-                                style: new TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 11.0,
-                                )
-                            ),
-                          ],
-                        )
-                    ),
-                    new Positioned(
-                      right: 0.0,
+                  new Positioned(
+                      left: 0.0,
                       bottom: 5.0,
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Container(
-                            height: 30,
-                            width: 30,
+                          new Text('Big Ben History',
+                              style: new TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontFamily: "Ebrima bold",
+                                fontSize: 9.0,
+                              )
+                          ),
+                          const SizedBox(height: 3,),
+                          new Text('Tuesday, 31 March 2020',
+                              style: new TextStyle(
+                                color: Colors.white,
+                                fontFamily: "Ebrima",
+                                fontSize: 7.0,
+                              )
+                          ),
+                        ],
+                      )
+                  ),
+                  new Positioned(
+                    right: 0.0,
+                    bottom: 2.0,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        GestureDetector(
+                          onTap: (){},
+                          child: Container(
+                            height: 17,
+                            width: 17,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 color: Colors.white
                             ),
-                            child: IconButton(
-                              icon: Icon(FontAwesome.heart_o, color: Color(0xffE33838),),
-                              onPressed: null,
-                              iconSize: 15,
-                            ),
+                            child: Icon(FontAwesome.heart_o, color: Color(0xffE33838),size: 7,),
                           ),
+                        ),
 
-                          const SizedBox(width: 5,),
+                        const SizedBox(width: 5,),
 
-                          Container(
-                            height: 30,
-                            width: 100,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                color: Color(0xffE33838)
-                            ),
-                            alignment: Alignment.center,
-                            child: Text('16.000Fcfa',
-                                textAlign: TextAlign.center,
-                                style: new TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontSize: 13.0,
-                                )
-                            ),
-                          )
-                        ],
-                      ),
+                        Container(
+                          height: 20,
+                          width: 80,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: Color(0xffE33838)
+                          ),
+                          alignment: Alignment.center,
+                          child: Text('16.000Fcfa',
+                              textAlign: TextAlign.center,
+                              style: new TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontFamily: "Ebrima bold",
+                                fontSize: 8.0,
+                              )
+                          ),
+                        )
+                      ],
                     ),
-                  ],
-                )
-            ),
+                  ),
+                ],
+              )
           ),
         ),
       );
     }
 
     return Scaffold(
-      backgroundColor: Color(0xffE8E8E8),
+      backgroundColor: Colors.white,
       body: Container(
         padding: EdgeInsets.all(12),
         child: new Column(
@@ -140,7 +140,13 @@ class _SearchPageState extends State<SearchPage>{
               new Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(10.0)
+                  borderRadius: BorderRadius.circular(10.0),
+                  boxShadow: [
+                    new BoxShadow(
+                      color: Color(0xff707070).withOpacity(0.2),
+                      offset: Offset(0, 2),
+                    )
+                  ]
                 ),
                 child: TextField(
                   onChanged: (query){
@@ -175,7 +181,7 @@ class _SearchPageState extends State<SearchPage>{
                 ),
               ),
 
-              const SizedBox(height: 15,),
+              const SizedBox(height: 4,),
 
               new Expanded(
                 child: new Center(

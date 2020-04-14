@@ -40,63 +40,62 @@ class _HomeState extends State<Home> {
                   )
                 ),
                 width: screenSize.width/1.1,
-                height: screenSize.height/3,
-                  padding: new EdgeInsets.only(left: 16.0, bottom: 8.0, right: 16.0),
+                height: screenSize.height/3.5,
+                  padding: new EdgeInsets.only(left: 12.0, bottom: 8.0, right: 12.0),
                   child: new Stack(
                     children: <Widget>[
 
                       new Positioned(
-                        left: 0.0,
-                        bottom: 5.0,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            new Text('Big Ben History',
-                                style: new TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontFamily: "Ebrima bold",
-                                  fontSize: 15.0,
-                                )
-                            ),
-                           const SizedBox(height: 5,),
-                            new Text('Tuesday, 31 March 2020',
-                                style: new TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: "Ebrima",
-                                  fontSize: 11.0,
-                                )
-                            ),
-                          ],
-                        )
+                          left: 0.0,
+                          bottom: 5.0,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              new Text('Big Ben History',
+                                  style: new TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontFamily: "Ebrima bold",
+                                    fontSize: 9.0,
+                                  )
+                              ),
+                              const SizedBox(height: 3,),
+                              new Text('Tuesday, 31 March 2020',
+                                  style: new TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: "Ebrima",
+                                    fontSize: 7.0,
+                                  )
+                              ),
+                            ],
+                          )
                       ),
                       new Positioned(
                         right: 0.0,
-                        bottom: 5.0,
+                        bottom: 2.0,
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
-                            Container(
-                              height: 30,
-                              width: 30,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(50),
-                                  color: Colors.white
-                              ),
-                              child: IconButton(
-                                icon: Icon(FontAwesome.heart_o, color: Color(0xffE33838),),
-                                onPressed: null,
-                                iconSize: 15,
+                            GestureDetector(
+                              onTap: (){},
+                              child: Container(
+                                height: 17,
+                                width: 17,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(50),
+                                    color: Colors.white
+                                ),
+                                child: Icon(FontAwesome.heart_o, color: Color(0xffE33838),size: 7,),
                               ),
                             ),
 
                             const SizedBox(width: 5,),
 
                             Container(
-                              height: 30,
-                              width: 100,
+                              height: 20,
+                              width: 80,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(12),
                                   color: Color(0xffE33838)
@@ -108,7 +107,7 @@ class _HomeState extends State<Home> {
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                     fontFamily: "Ebrima bold",
-                                    fontSize: 13.0,
+                                    fontSize: 8.0,
                                   )
                               ),
                             )
@@ -136,14 +135,14 @@ class _HomeState extends State<Home> {
               Navigator.of(context).pushNamed("/details");
             },
             child: Card(
-              margin: EdgeInsets.only(right: 10,left: 16,top: 5,bottom: 5),
+              margin: EdgeInsets.only(right: 0,left: 16,top: 5,bottom: 5),
               shape: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(22),
                   borderSide: BorderSide(width: 0,style: BorderStyle.none),
               ),
               child: Container(
-                  width: screenSize.width/2.4,
-                  height: screenSize.height/3.7,
+                  width: screenSize.width/2.3,
+                  height: screenSize.height/4,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(22),
                       image: DecorationImage(
@@ -153,7 +152,7 @@ class _HomeState extends State<Home> {
                           fit: BoxFit.cover
                       )
                   ),
-                  padding: new EdgeInsets.only(left: 12.0, bottom: 8.0, right: 12.0),
+                  padding: new EdgeInsets.only(left: 8.0, bottom: 4.0, right: 8.0),
                   child: new Stack(
                     children: <Widget>[
 
@@ -169,15 +168,15 @@ class _HomeState extends State<Home> {
                                     color: Colors.white,
                                     fontFamily: "Ebrima bold",
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 13.5,
+                                    fontSize: 7.5,
                                   )
                               ),
-                              const SizedBox(height: 5,),
+                              const SizedBox(height: 2,),
                               new Text('Tuesday, 31 March 2020',
                                   style: new TextStyle(
                                     color: Colors.white,
                                     fontFamily: "Ebrima",
-                                    fontSize: 10.0,
+                                    fontSize: 6.5,
                                   )
                               ),
                             ],
@@ -186,19 +185,18 @@ class _HomeState extends State<Home> {
                       new Positioned(
                         right: 0.0,
                         bottom: 5.0,
-                        child: Container(
-                              height: 25,
-                              width: 25,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(50),
-                                  color: Colors.white
-                              ),
-                              child: IconButton(
-                                  icon: Icon(FontAwesome.heart_o, color: Color(0xffE33838),),
-                                  onPressed: null,
-                                  iconSize: 10,
-                              ),
+                        child: GestureDetector(
+                          onTap: (){},
+                          child: Container(
+                            height: 17,
+                            width: 17,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: Colors.white
+                            ),
+                            child: Icon(FontAwesome.heart_o, color: Color(0xffE33838),size: 8,),
                           ),
+                        )
                       ),
                     ],
                   )
@@ -216,7 +214,7 @@ class _HomeState extends State<Home> {
         Navigator.of(context).pushNamed("/details");
       },
       child: Card(
-        margin: EdgeInsets.only(right: 16,left: 16,top: 5,bottom: 5),
+        margin: EdgeInsets.only(right: 10,left: 16,top: 5,bottom: 5),
         shape: OutlineInputBorder(
           borderRadius: BorderRadius.circular(22),
           borderSide: BorderSide(width: 0,style: BorderStyle.none),
@@ -232,8 +230,8 @@ class _HomeState extends State<Home> {
                 )
             ),
             width: screenSize.width/1.1,
-            height: screenSize.height/3,
-            padding: new EdgeInsets.only(left: 16.0, bottom: 8.0, right: 16.0),
+            height: screenSize.height/3.5,
+            padding: new EdgeInsets.only(left: 12.0, bottom: 8.0, right: 12.0),
             child: new Stack(
               children: <Widget>[
 
@@ -249,15 +247,15 @@ class _HomeState extends State<Home> {
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                               fontFamily: "Ebrima bold",
-                              fontSize: 15.0,
+                              fontSize: 9.0,
                             )
                         ),
-                        const SizedBox(height: 5,),
+                        const SizedBox(height: 3,),
                         new Text('Tuesday, 31 March 2020',
                             style: new TextStyle(
                               color: Colors.white,
                               fontFamily: "Ebrima",
-                              fontSize: 11.0,
+                              fontSize: 7.0,
                             )
                         ),
                       ],
@@ -265,30 +263,29 @@ class _HomeState extends State<Home> {
                 ),
                 new Positioned(
                   right: 0.0,
-                  bottom: 5.0,
+                  bottom: 2.0,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
-                            color: Colors.white
-                        ),
-                        child: IconButton(
-                          icon: Icon(FontAwesome.heart_o, color: Color(0xffE33838),),
-                          onPressed: null,
-                          iconSize: 15,
+                      GestureDetector(
+                        onTap: (){},
+                        child: Container(
+                          height: 17,
+                          width: 17,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white
+                          ),
+                          child: Icon(FontAwesome.heart_o, color: Color(0xffE33838),size: 7,),
                         ),
                       ),
 
                       const SizedBox(width: 5,),
 
                       Container(
-                        height: 30,
-                        width: 100,
+                        height: 20,
+                        width: 80,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
                             color: Color(0xffE33838)
@@ -300,7 +297,7 @@ class _HomeState extends State<Home> {
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                               fontFamily: "Ebrima bold",
-                              fontSize: 13.0,
+                              fontSize: 8.0,
                             )
                         ),
                       )
@@ -326,14 +323,14 @@ class _HomeState extends State<Home> {
               Navigator.of(context).pushNamed("/details");
             },
             child: Card(
-              margin: EdgeInsets.only(right: 10,left: 16,top: 5,bottom: 5),
+              margin: EdgeInsets.only(right: 0,left: 16,top: 5,bottom: 5),
               shape: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(22),
                 borderSide: BorderSide(width: 0,style: BorderStyle.none),
               ),
               child: Container(
-                  width: screenSize.width/2.4,
-                  height: screenSize.height/3.7,
+                  width: screenSize.width/2.3,
+                  height: screenSize.height/4,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(22),
                       image: DecorationImage(
@@ -343,7 +340,7 @@ class _HomeState extends State<Home> {
                           fit: BoxFit.cover
                       )
                   ),
-                  padding: new EdgeInsets.only(left: 12.0, bottom: 8.0, right: 12.0),
+                  padding: new EdgeInsets.only(left: 8.0, bottom: 4.0, right: 8.0),
                   child: new Stack(
                     children: <Widget>[
 
@@ -359,36 +356,35 @@ class _HomeState extends State<Home> {
                                     color: Colors.white,
                                     fontFamily: "Ebrima bold",
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 13.5,
+                                    fontSize: 7.5,
                                   )
                               ),
-                              const SizedBox(height: 5,),
+                              const SizedBox(height: 2,),
                               new Text('Tuesday, 31 March 2020',
                                   style: new TextStyle(
                                     color: Colors.white,
                                     fontFamily: "Ebrima",
-                                    fontSize: 10.0,
+                                    fontSize: 6.5,
                                   )
                               ),
                             ],
                           )
                       ),
                       new Positioned(
-                        right: 0.0,
-                        bottom: 5.0,
-                        child: Container(
-                          height: 25,
-                          width: 25,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50),
-                              color: Colors.white
-                          ),
-                          child: IconButton(
-                            icon: Icon(FontAwesome.heart_o, color: Color(0xffE33838),),
-                            onPressed: null,
-                            iconSize: 10,
-                          ),
-                        ),
+                          right: 0.0,
+                          bottom: 5.0,
+                          child: GestureDetector(
+                            onTap: (){},
+                            child: Container(
+                              height: 17,
+                              width: 17,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(50),
+                                  color: Colors.white
+                              ),
+                              child: Icon(FontAwesome.heart_o, color: Color(0xffE33838),size: 8,),
+                            ),
+                          )
                       ),
                     ],
                   )
@@ -407,6 +403,7 @@ class _HomeState extends State<Home> {
 
     return WillPopScope(
         child: Scaffold(
+          backgroundColor: Colors.white,
           appBar: PreferredSize(
             child:AppBar(
                 title: Container(
@@ -416,25 +413,39 @@ class _HomeState extends State<Home> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text("Postvent",
-                            style: TextStyle(fontSize: 30,fontFamily: "CameronSans",fontWeight: FontWeight.w300,color: Color(0xff707070)),
+                            style: TextStyle(fontSize: 28,fontFamily: "CameronSans",fontWeight: FontWeight.w300,color: Color(0xff707070)),
                           ),
 
                           SizedBox(width: _screenSize.width/3.0,),
 
                           IconButton(
-                            icon: Icon(AntDesign.search1,color: Color(0xff707070),size: 20,),
+                            icon: Icon(AntDesign.search1,color: Color(0xff707070),size: 18,),
                             onPressed: () {
                               Navigator.of(context).pushNamed("/search");
                             },
                           ),
 
-                          IconButton(
-                            icon: Icon(FontAwesome.bell_o,color: Color(0xff707070),size: 20,),
-                            onPressed: () {
-                            },
-                          ),
+                          GestureDetector(
+                            onTap: (){},
+                            child: Container(
+                              height: 33,
+                              width: 33,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(50),
+                                  boxShadow: [
+                                    new BoxShadow(
+                                      color: Color(0xff707070).withOpacity(0.2),
+                                      offset: Offset(0, 1),
+                                    )
+                                  ]
+                              ),
+                              child: Icon(FontAwesome.bell_o,color: Color(0xff707070),size: 14,),
+                            ),
+                          )
                         ],
                       )
                     ],
@@ -447,7 +458,7 @@ class _HomeState extends State<Home> {
                       padding: EdgeInsets.only(left: 17,bottom: 7),
                       alignment: Alignment.centerLeft,
                       child: Text("Today,03 March 2020",
-                        style: TextStyle(fontSize: 13,fontFamily: "Ebrima",fontWeight: FontWeight.w100,color: Color(0xff707070)),
+                        style: TextStyle(fontSize: 10,fontFamily: "Ebrima",fontWeight: FontWeight.w100,color: Color(0xff707070)),
                       ),
                     ),
                     preferredSize: null
@@ -459,8 +470,9 @@ class _HomeState extends State<Home> {
             scrollDirection: Axis.vertical,
             shrinkWrap: true,
             children: [
+              const SizedBox(height: 15,),
               SizedBox(
-                height: _screenSize.height/3,
+                height: _screenSize.height/3.5,
                 child: _getBestEvent(_screenSize),
               ),
 
@@ -476,12 +488,12 @@ class _HomeState extends State<Home> {
                           fontFamily: "Ebrima",
                           fontWeight: FontWeight.w400,
                           color: Color(0xff707070),
-                          fontSize: 20.0,
+                          fontSize: 15.0,
                         )
                     ),
 
                     IconButton(
-                        icon: Icon(Icons.more_horiz,color: Color(0xff707070),size: 30),
+                        icon: Icon(Icons.more_horiz,color: Color(0xff707070),size: 25),
                         onPressed: null
                     )
                   ],
@@ -489,7 +501,7 @@ class _HomeState extends State<Home> {
               ),
 
               SizedBox(
-                height: _screenSize.height/3.7,
+                height: _screenSize.height/4,
                 child: _getRecommendedEvent(_screenSize),
               ),
 
@@ -505,7 +517,7 @@ class _HomeState extends State<Home> {
                           fontWeight: FontWeight.w400,
                           fontFamily: "Ebrima",
                           color: Color(0xff707070),
-                          fontSize: 20.0,
+                          fontSize: 15.0,
                         )
                     ),
                   ],
@@ -513,7 +525,7 @@ class _HomeState extends State<Home> {
               ),
 
               SizedBox(
-                height: _screenSize.height/3,
+                height: _screenSize.height/3.5,
                 child: _getNews(_screenSize),
               ),
 
@@ -529,12 +541,12 @@ class _HomeState extends State<Home> {
                           fontFamily: "Ebrima",
                           fontWeight: FontWeight.w400,
                           color: Color(0xff707070),
-                          fontSize: 20.0,
+                          fontSize: 15.0,
                         )
                     ),
 
                     IconButton(
-                        icon: Icon(Icons.more_horiz,color: Color(0xff707070),size: 30),
+                        icon: Icon(Icons.more_horiz,color: Color(0xff707070),size: 25),
                         onPressed: null
                     )
                   ],
@@ -542,7 +554,7 @@ class _HomeState extends State<Home> {
               ),
 
               SizedBox(
-                height: _screenSize.height/3.7,
+                height: _screenSize.height/4,
                 child: _getMostLikedEvent(_screenSize),
               ),
 

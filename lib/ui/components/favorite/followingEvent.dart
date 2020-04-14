@@ -35,42 +35,45 @@ class _FollowingEventState extends State<FollowingEvent>{
                   child: Column(
                     children: <Widget>[
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text("Following",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontSize: 30,
+                                fontSize: 28,
                                 fontFamily: "Ebrima",
                                 fontWeight: FontWeight.w200,
                                 color: Color(0xff707070)
                             ),
                           ),
 
-                          SizedBox(width: _screenSize.width/2.7,),
+                          SizedBox(width: _screenSize.width/3,),
 
                           IconButton(
-                                icon: Icon(AntDesign.search1,color: Color(0xff707070),size: 22,),
+                                icon: Icon(AntDesign.search1,color: Color(0xff707070),size: 18,),
                                 onPressed: () {
                                   Navigator.of(context).pushNamed("/search");
                                 },
                           ),
 
-                          Container(
-                            margin: EdgeInsets.only(top: 0),
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(100)
+                          GestureDetector(
+                            onTap: (){},
+                            child: Container(
+                              height: 33,
+                              width: 33,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(50),
+                                  boxShadow: [
+                                    new BoxShadow(
+                                      color: Color(0xff707070).withOpacity(0.2),
+                                      offset: Offset(0, 1),
+                                    )
+                                  ]
+                              ),
+                              child: Icon(FontAwesome.bell_o,color: Color(0xff707070),size: 14,),
                             ),
-                            width: 35,
-                            height: 35,
-                            child: IconButton(
-                              icon: Icon(FontAwesome.bell_o,color: Color(0xff707070),size: 18,),
-                              onPressed: () {
-
-                              },
-                            ),
-                          ),
+                          )
 
                         ],
                       ),
@@ -132,7 +135,7 @@ class _FollowingEventState extends State<FollowingEvent>{
                           children: <Widget>[
 
                             Container(
-                              margin: EdgeInsets.only(left: 13),
+                              margin: EdgeInsets.only(left: 20),
                               decoration: BoxDecoration(
                                 border: Border.all(
                                   color: index %2 == 0 ? Colors.grey.withOpacity(0.35) : Color(0xffE33838),
@@ -149,8 +152,8 @@ class _FollowingEventState extends State<FollowingEvent>{
                                   child: Image.asset(
                                       "asset/images/transporteur.png",
                                       fit: BoxFit.cover,
-                                      height: 44,
-                                      width: 44
+                                      height: 35,
+                                      width: 35
                                   ),
                                 ),
                               ),
@@ -169,7 +172,7 @@ class _FollowingEventState extends State<FollowingEvent>{
                                     style: TextStyle(
                                         color: Colors.black87,
                                         fontWeight: FontWeight.w900,
-                                        fontSize: 13,
+                                        fontSize: 11,
                                         fontFamily: "Ebrima bold",
                                     ),
                                   ),
@@ -177,11 +180,10 @@ class _FollowingEventState extends State<FollowingEvent>{
                                   const SizedBox(height: 5,),
 
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
 
-                                      Icon(Icons.gps_fixed,color: Color(0xff707070),size: 10,),
+                                      Icon(Icons.gps_fixed,color: Color(0xff707070),size: 9,),
 
                                       const SizedBox(width: 2,),
 
@@ -189,7 +191,7 @@ class _FollowingEventState extends State<FollowingEvent>{
                                         style: TextStyle(
                                             color: Color(0xff707070),
                                             fontWeight: FontWeight.w300,
-                                            fontSize: 10,
+                                            fontSize: 9,
                                           fontFamily: "Ebrima",
                                         ),
                                       ),
@@ -200,7 +202,7 @@ class _FollowingEventState extends State<FollowingEvent>{
                               ),
                             ),
 
-                            SizedBox(width: _screenSize.width/3.5,),
+                            SizedBox(width: _screenSize.width/3.1,),
 
                             GestureDetector(
                               onTap: (){
@@ -209,13 +211,13 @@ class _FollowingEventState extends State<FollowingEvent>{
                               child: Align(
                                   alignment: Alignment.centerRight,
                                   child:  Container(
-                                    height: 17,
+                                    height: 20,
                                     width: _screenSize.width/4.4,
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(20),
                                         color: index %2 == 0 ? Colors.white : Color(0xffE33838),
                                         border: Border.all(
-                                          width: 1.5,
+                                          width: 1.0,
                                           color: Color(0xffE33838),
                                         )
                                     ),
@@ -227,7 +229,7 @@ class _FollowingEventState extends State<FollowingEvent>{
                                                                 fontWeight: FontWeight.bold,
                                                                 color:  Color(0xffE33838),
                                                                 fontFamily: "Ebrima",
-                                                                fontSize: 11.0,
+                                                                fontSize: 7.0,
                                                               )
                                                           )
                                                          :
@@ -237,7 +239,7 @@ class _FollowingEventState extends State<FollowingEvent>{
                                                                   fontWeight: FontWeight.bold,
                                                                   color:  Colors.white,
                                                                   fontFamily: "Ebrima",
-                                                                  fontSize: 11.0,
+                                                                  fontSize: 7.0,
                                                                 )
                                                             ),
                                   )
@@ -248,7 +250,7 @@ class _FollowingEventState extends State<FollowingEvent>{
                         ),
 
                         Container(
-                          margin: EdgeInsets.only(top: 10),
+                          margin: EdgeInsets.only(top: 7),
                           height: _screenSize.height/4.2,
                           width: _screenSize.width,
                           child: ListView.builder(
@@ -263,14 +265,14 @@ class _FollowingEventState extends State<FollowingEvent>{
                                     Navigator.of(context).pushNamed("/details");
                                   },
                                   child: Card(
-                                    margin: EdgeInsets.only(right: 7,left: 10,top: 0,bottom: 5),
+                                    margin: EdgeInsets.only(right: 0,left: 15.5,top: 5,bottom: 5),
                                     shape: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(22),
                                       borderSide: BorderSide(width: 0,style: BorderStyle.none),
                                     ),
                                     child: Container(
-                                        width: _screenSize.width/2.25,
-                                        height: _screenSize.height/3.8,
+                                        width: _screenSize.width/2.3,
+                                        height: _screenSize.height/4,
                                         decoration: BoxDecoration(
                                             borderRadius: BorderRadius.circular(22),
                                             image: DecorationImage(
@@ -280,7 +282,7 @@ class _FollowingEventState extends State<FollowingEvent>{
                                                 fit: BoxFit.cover
                                             )
                                         ),
-                                        padding: new EdgeInsets.only(left: 12.0, bottom: 8.0, right: 12.0),
+                                        padding: new EdgeInsets.only(left: 8.0, bottom: 4.0, right: 8.0),
                                         child: new Stack(
                                           children: <Widget>[
 
@@ -296,36 +298,35 @@ class _FollowingEventState extends State<FollowingEvent>{
                                                           color: Colors.white,
                                                           fontFamily: "Ebrima bold",
                                                           fontWeight: FontWeight.bold,
-                                                          fontSize: 13.5,
+                                                          fontSize: 7.5,
                                                         )
                                                     ),
-                                                    const SizedBox(height: 5,),
+                                                    const SizedBox(height: 2,),
                                                     new Text('Tuesday, 31 March 2020',
                                                         style: new TextStyle(
                                                           color: Colors.white,
                                                           fontFamily: "Ebrima",
-                                                          fontSize: 10.0,
+                                                          fontSize: 6.5,
                                                         )
                                                     ),
                                                   ],
                                                 )
                                             ),
                                             new Positioned(
-                                              right: 0.0,
-                                              bottom: 5.0,
-                                              child: Container(
-                                                height: 25,
-                                                width: 25,
-                                                decoration: BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(50),
-                                                    color: Colors.white
-                                                ),
-                                                child: IconButton(
-                                                  icon: Icon(FontAwesome.heart_o, color: Color(0xffE33838),),
-                                                  onPressed: null,
-                                                  iconSize: 10,
-                                                ),
-                                              ),
+                                                right: 0.0,
+                                                bottom: 5.0,
+                                                child: GestureDetector(
+                                                  onTap: (){},
+                                                  child: Container(
+                                                    height: 17,
+                                                    width: 17,
+                                                    decoration: BoxDecoration(
+                                                        borderRadius: BorderRadius.circular(50),
+                                                        color: Colors.white
+                                                    ),
+                                                    child: Icon(FontAwesome.heart_o, color: Color(0xffE33838),size: 8,),
+                                                  ),
+                                                )
                                             ),
                                           ],
                                         )

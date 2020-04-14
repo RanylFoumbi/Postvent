@@ -1,4 +1,4 @@
-#Wed Apr 08 15:48:21 WAT 2020
+#Tue Apr 14 18:20:32 WAT 2020
 base.0=/home/ranolf/Bureau/Dev/postvent/postvent/build/app/intermediates/dex/release/mergeDexRelease/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
