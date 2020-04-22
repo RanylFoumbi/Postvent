@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
-import 'components/added/addedEvent.dart';
-import 'components/favorite/favoriteView.dart';
+import 'components/added/addedEventPage.dart';
+import 'components/favorite/favoriteViewPage.dart';
 import 'components/home.dart';
 import 'utilities/loader.dart';
 
@@ -17,12 +17,12 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   int _selectedIndex = 0;
   PageController _pageController;
-  List<Widget> _screenList = [Home(),FavoriteView(),AddedEvent(),Loader()];
+  List<Widget> _screenList = [Home(),FavoriteView(),AddedEvents(),Loader()];
 
 /*when init component*/
   @override
   void initState() {
-    _pageController = PageController();
+    _pageController = new PageController();
      super.initState();
   }
 

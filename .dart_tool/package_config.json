@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "align_positioned",
+      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/align_positioned-1.2.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "archive",
       "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/archive-2.0.11",
       "packageUri": "lib/",
@@ -27,15 +33,21 @@
     },
     {
       "name": "cached_network_image",
-      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/cached_network_image-2.0.0",
+      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/cached_network_image-2.1.0+1",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.1"
     },
     {
       "name": "charcode",
       "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/charcode-1.1.2",
       "packageUri": "lib/",
       "languageVersion": "1.0"
+    },
+    {
+      "name": "clock",
+      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
     },
     {
       "name": "collection",
@@ -62,10 +74,10 @@
       "languageVersion": "2.0"
     },
     {
-      "name": "floating_search_bar",
-      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/floating_search_bar-0.3.0",
+      "name": "file",
+      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/file-5.1.0",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.2"
     },
     {
       "name": "flutter",
@@ -75,13 +87,13 @@
     },
     {
       "name": "flutter_cache_manager",
-      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_cache_manager-1.1.3",
+      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_cache_manager-1.2.2",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.6"
     },
     {
       "name": "flutter_icons",
-      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_icons-1.0.0+1",
+      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_icons-1.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -122,16 +134,10 @@
       "languageVersion": "2.2"
     },
     {
-      "name": "flutter_web_plugins",
-      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/packages/flutter_web_plugins",
-      "packageUri": "lib/",
-      "languageVersion": "2.0"
-    },
-    {
       "name": "http",
-      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.11.3+17",
+      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.12.0+4",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.4"
     },
     {
       "name": "http_parser",
@@ -146,10 +152,22 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "intl",
+      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.16.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.5"
+    },
+    {
       "name": "matcher",
       "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.6",
       "packageUri": "lib/",
       "languageVersion": "2.2"
+    },
+    {
+      "name": "matrix4_transform",
+      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/matrix4_transform-1.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
     },
     {
       "name": "meta",
@@ -180,6 +198,12 @@
       "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-1.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "pedantic",
+      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.9.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
     },
     {
       "name": "petitparser",
@@ -216,6 +240,12 @@
       "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/redux-4.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "rxdart",
+      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/rxdart-0.24.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.6"
     },
     {
       "name": "sky_engine",
@@ -290,30 +320,6 @@
       "languageVersion": "2.0"
     },
     {
-      "name": "url_launcher",
-      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.4.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.0"
-    },
-    {
-      "name": "url_launcher_macos",
-      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_macos-0.0.1+4",
-      "packageUri": "lib/",
-      "languageVersion": "2.1"
-    },
-    {
-      "name": "url_launcher_platform_interface",
-      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_platform_interface-1.0.6",
-      "packageUri": "lib/",
-      "languageVersion": "2.0"
-    },
-    {
-      "name": "url_launcher_web",
-      "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_web-0.1.1+1",
-      "packageUri": "lib/",
-      "languageVersion": "2.0"
-    },
-    {
       "name": "uuid",
       "rootUri": "file:///home/ranolf/Public/flutter_linux/flutter/.pub-cache/hosted/pub.dartlang.org/uuid-2.0.4",
       "packageUri": "lib/",
@@ -338,7 +344,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2020-04-08T13:07:06.351590Z",
+  "generated": "2020-04-19T14:06:36.989071Z",
   "generator": "pub",
   "generatorVersion": "2.8.0-dev.12.0.flutter-9983424a3c"
 }

@@ -10,7 +10,7 @@ class Loader extends StatelessWidget {
         alignment: Alignment.center,
         child: SpinKitDoubleBounce(
           color: Color(0xffE33838),
-          size: 100.0,
+          size: 80.0,
         ),
     );
   }

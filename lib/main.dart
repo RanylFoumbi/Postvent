@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-import 'ui/components/details/details.dart';
-import 'ui/components/favorite/followingEvent.dart';
-import 'ui/components/search/search.dart';
+import 'ui/components/added/addedEventPage.dart';
+import 'ui/components/details/detailsPage.dart';
+import 'ui/components/favorite/favoriteViewPage.dart';
+import 'ui/components/search/searchPage.dart';
 import 'ui/homePage.dart';
 import 'ui/utilities/loader.dart';
 
 void main() {
-  runApp(MyApp());
+  /*To block Screen rotation*/
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitDown,DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(new Main());
+  });
 }
 
-class MyApp extends StatelessWidget {
+class Main extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -18,13 +25,15 @@ class MyApp extends StatelessWidget {
       title: 'Postvent',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: "Ebrima"
       ),
       home: HomePage(),
       routes: <String, WidgetBuilder> {
         '/home': (BuildContext context) => HomePage(),
-        '/favorites': (BuildContext context) => FollowingEvent(),
+        '/favorites': (BuildContext context) => FavoriteView(),
         '/details': (BuildContext context) => DetailPage(),
         '/search': (BuildContext context) => SearchPage(),
+        '/added': (BuildContext context) => AddedEvents(),
         '/loader':(BuildContext context) => Loader(),
       },
     );

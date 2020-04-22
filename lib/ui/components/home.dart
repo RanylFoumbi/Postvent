@@ -419,7 +419,7 @@ class _HomeState extends State<Home> {
                             style: TextStyle(fontSize: 28,fontFamily: "CameronSans",fontWeight: FontWeight.w300,color: Color(0xff707070)),
                           ),
 
-                          SizedBox(width: _screenSize.width/3.0,),
+                          new Spacer(),
 
                           IconButton(
                             icon: Icon(AntDesign.search1,color: Color(0xff707070),size: 18,),
