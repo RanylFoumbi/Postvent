@@ -3,7 +3,10 @@ import 'package:flutter/services.dart';
 
 import 'ui/components/added/addedEventPage.dart';
 import 'ui/components/details/detailsPage.dart';
+import 'ui/components/eventType/recommandedAndMostLikePage.dart';
 import 'ui/components/favorite/favoriteViewPage.dart';
+import 'ui/components/profiles/mainProfile/accountPage.dart';
+import 'ui/components/profiles/mainProfile/userProfilePage.dart';
 import 'ui/components/search/searchPage.dart';
 import 'ui/homePage.dart';
 import 'ui/utilities/loader.dart';
@@ -34,10 +37,14 @@ class Main extends StatelessWidget {
         '/details': (BuildContext context) => DetailPage(),
         '/search': (BuildContext context) => SearchPage(),
         '/added': (BuildContext context) => AddedEvents(),
+        '/account':(BuildContext context) => AccountPage(),
+        '/userProfile':(BuildContext context) => userProfilePage(),
+        '/recommendedAndMostLike':(BuildContext context) => RecommendedAndMostLikePage(),
         '/loader':(BuildContext context) => Loader(),
       },
     );
   }
 }
+
 
 
