@@ -40,10 +40,10 @@ class _FollowingEventState extends State<FollowingEvent>{
                           Text("Following",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontSize: 28,
-                                fontFamily: "Ebrima",
-                                fontWeight: FontWeight.w200,
-                                color: Color(0xff707070)
+                                fontSize: 27,
+                                fontFamily: "CameronSans",
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black.withOpacity(0.7)
                             ),
                           ),
 
@@ -255,7 +255,6 @@ class _FollowingEventState extends State<FollowingEvent>{
                           height: _screenSize.height/4.2,
                           width: _screenSize.width,
                           child: ListView.builder(
-                              padding: EdgeInsets.only(left: 2,right: 2),
                               shrinkWrap: true,
                               scrollDirection: Axis.horizontal,
                               controller: _scrollController,
@@ -266,7 +265,7 @@ class _FollowingEventState extends State<FollowingEvent>{
                                     Navigator.of(context).pushNamed("/details");
                                   },
                                   child: Card(
-                                    margin: EdgeInsets.only(right: 0,left: 15.5,top: 5,bottom: 5),
+                                    margin: EdgeInsets.only(right: 0,left: 16,top: 5,bottom: 5),
                                     shape: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(22),
                                       borderSide: BorderSide(width: 0,style: BorderStyle.none),
@@ -283,52 +282,69 @@ class _FollowingEventState extends State<FollowingEvent>{
                                                 fit: BoxFit.cover
                                             )
                                         ),
-                                        padding: new EdgeInsets.only(left: 8.0, bottom: 4.0, right: 8.0),
                                         child: new Stack(
                                           children: <Widget>[
 
-                                            new Positioned(
-                                                left: 0.0,
-                                                bottom: 5.0,
-                                                child: Column(
-                                                  mainAxisAlignment: MainAxisAlignment.start,
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: <Widget>[
-                                                    new Text('Big Ben History',
-                                                        style: new TextStyle(
-                                                          color: Colors.white,
-                                                          fontFamily: "Ebrima bold",
-                                                          fontWeight: FontWeight.bold,
-                                                          fontSize: 7.5,
-                                                        )
-                                                    ),
-                                                    const SizedBox(height: 2,),
-                                                    new Text('Tuesday, 31 March 2020',
-                                                        style: new TextStyle(
-                                                          color: Colors.white,
-                                                          fontFamily: "Ebrima",
-                                                          fontSize: 6.5,
-                                                        )
-                                                    ),
-                                                  ],
-                                                )
-                                            ),
-                                            new Positioned(
-                                                right: 0.0,
-                                                bottom: 5.0,
-                                                child: GestureDetector(
-                                                  onTap: (){},
-                                                  child: Container(
-                                                    height: 17,
-                                                    width: 17,
-                                                    decoration: BoxDecoration(
-                                                        borderRadius: BorderRadius.circular(50),
-                                                        color: Colors.white
-                                                    ),
-                                                    child: Icon(FontAwesome.heart_o, color: Color(0xffE33838),size: 8,),
+                                            Container(
+                                              width: _screenSize.width/2.3,
+                                              height: _screenSize.height/4,
+                                              decoration: BoxDecoration(
+                                                  borderRadius: BorderRadius.circular(22),
+                                                  gradient: LinearGradient(
+                                                    colors: [Colors.black54, Colors.black.withOpacity(0)],
+                                                    begin: Alignment.bottomCenter,
+                                                    end: Alignment.topCenter,
+                                                  )
+                                              ),
+                                              padding: new EdgeInsets.only(left: 8.0, bottom: 4.0, right: 8.0),
+                                              child: Stack(
+                                                children: <Widget>[
+                                                  new Positioned(
+                                                      left: 0.0,
+                                                      bottom: 5.0,
+                                                      child: Column(
+                                                        mainAxisAlignment: MainAxisAlignment.start,
+                                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                                        children: <Widget>[
+                                                          new Text('Big Ben History',
+                                                              style: new TextStyle(
+                                                                color: Colors.white,
+                                                                fontFamily: "Ebrima bold",
+                                                                fontWeight: FontWeight.bold,
+                                                                fontSize: 8.5,
+                                                              )
+                                                          ),
+                                                          const SizedBox(height: 2,),
+                                                          new Text('Tuesday, 31 March 2020',
+                                                              style: new TextStyle(
+                                                                color: Colors.white,
+                                                                fontFamily: "Ebrima",
+                                                                fontSize: 7.5,
+                                                              )
+                                                          ),
+                                                        ],
+                                                      )
                                                   ),
-                                                )
+                                                  new Positioned(
+                                                      right: 0.0,
+                                                      bottom: 5.0,
+                                                      child: GestureDetector(
+                                                        onTap: (){},
+                                                        child: Container(
+                                                          height: 17,
+                                                          width: 17,
+                                                          decoration: BoxDecoration(
+                                                              borderRadius: BorderRadius.circular(50),
+                                                              color: Colors.white
+                                                          ),
+                                                          child: Icon(FontAwesome.heart_o, color: Color(0xffE33838),size: 8,),
+                                                        ),
+                                                      )
+                                                  ),
+                                                ],
+                                              ),
                                             ),
+
                                           ],
                                         )
                                     ),

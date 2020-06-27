@@ -5,7 +5,7 @@ import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 import 'components/added/addedEventPage.dart';
 import 'components/favorite/favoriteViewPage.dart';
 import 'components/home.dart';
-import 'utilities/loader.dart';
+import 'components/profiles/mainProfile/userProfilePage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   int _selectedIndex = 0;
   PageController _pageController;
-  List<Widget> _screenList = [Home(),FavoriteView(),AddedEvents(),Loader()];
+  List<Widget> _screenList = [Home(),FavoriteView(),AddedEvents(),userProfilePage()];
 
 /*when init component*/
   @override
@@ -44,6 +44,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
        extendBodyBehindAppBar: true,
        body: Stack(
            children: <Widget>[
+
              Container(
                color: Colors.white,
                height: MediaQuery.of(context).size.height,
@@ -88,11 +89,13 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
            ),
            BottomNavigationBarItem(
                icon: Icon(FontAwesome.user_o, color: Color(0xff707070),),
-               title: Text('', style: TextStyle(color: Color(0xff707070)),)),
+               title: Text('', style: TextStyle(color: Color(0xff707070)),)
+           ),
          ],
        ),
      );
   }
+
 
   /*when the component die*/
   @override

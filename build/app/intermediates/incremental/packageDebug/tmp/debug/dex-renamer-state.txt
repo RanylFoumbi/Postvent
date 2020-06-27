@@ -1,4 +1,0 @@
-#Tue Apr 21 10:44:04 WAT 2020
-base.0=/home/ranolf/Bureau/Dev/postvent/postvent/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
